@@ -62,7 +62,15 @@ function customizePostMenu(api, container) {
   const transformerRegistered = api.registerValueTransformer(
     "post-menu-buttons",
     ({ value: dag, context: { firstButtonKey } }) => {
-      dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
+      // dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
+      dag.add("translate", {
+      setupComponentArgs() {
+          return { title: "Translate button", action: "translate" };
+        },
+        tagName: "button",
+        icon: "globe",
+        classNames: ["btn", "btn-icon"],
+      });
     }
   );
 
@@ -168,34 +176,43 @@ function customizeWidgetPostMenu(api) {
     }
   });
 
-  api.addPostMenuButton("translate", (attrs, state) => {
-
-    console.log("FORCE attrs", attrs);
-
+  api.addPostMenuButton("translate", () => {
+    console.log("addPostMenuButton triggered");
     return {
-    action: "translate",
-    title: "translator.view_translation",
-    icon: "globe",
-    position: "first",
+      action: "translate",
+      title: "translator.view_translation",
+      icon: "globe",
     };
-
-    // if (!attrs.can_translate) {
-    //   return;
-    // }
-
-    // const [action, title] = !state.isTranslated
-    //   ? ["translate", "translator.view_translation"]
-    //   : ["hideTranslation", "translator.hide_translation"];
-
-    // return {
-    //   action,
-    //   title,
-    //   icon: "globe",
-    //   position: "first",
-    //   className: state.isTranslated ? "translated" : null,
-    // };
-
   });
+
+  // api.addPostMenuButton("translate", (attrs, state) => {
+
+  //   console.log("FORCE attrs", attrs);
+
+  //   return {
+  //   action: "translate",
+  //   title: "translator.view_translation",
+  //   icon: "globe",
+  //   position: "first",
+  //   };
+
+  //   // if (!attrs.can_translate) {
+  //   //   return;
+  //   // }
+
+  //   // const [action, title] = !state.isTranslated
+  //   //   ? ["translate", "translator.view_translation"]
+  //   //   : ["hideTranslation", "translator.hide_translation"];
+
+  //   // return {
+  //   //   action,
+  //   //   title,
+  //   //   icon: "globe",
+  //   //   position: "first",
+  //   //   className: state.isTranslated ? "translated" : null,
+  //   // };
+
+  // });
 }
 
 export default {
