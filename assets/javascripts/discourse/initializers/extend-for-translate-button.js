@@ -9,6 +9,9 @@ import ShowOriginalContent from "../components/show-original-content";
 import TranslatedPost from "../components/translated-post";
 
 function initializeTranslation(api) {
+
+  console.log("PLUGIN INITIALIZE 2");
+
   const siteSettings = api.container.lookup("service:site-settings");
   if (!siteSettings.translator_enabled) {
     return;
@@ -62,6 +65,8 @@ function customizePostMenu(api, container) {
       dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
     }
   );
+
+  console.log("transformerRegistered", transformerRegistered);
 
   if (transformerRegistered) {
     // the plugin outlet is not updated when the post instance is modified unless we register the new properties as
@@ -196,6 +201,7 @@ function customizeWidgetPostMenu(api) {
 export default {
   name: "extend-for-translate-button",
   initialize() {
+    console.log("PLUGIN INITIALIZE");
     withPluginApi("1.39.2", (api) => initializeTranslation(api));
   },
 };
