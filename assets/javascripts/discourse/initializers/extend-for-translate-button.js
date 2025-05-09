@@ -56,17 +56,12 @@ function initializeTranslation(api) {
 }
 
 function customizePostMenu(api, container) {
-
-  console.log("Debug container", container);
-  
   const transformerRegistered = api.registerValueTransformer(
     "post-menu-buttons",
     ({ value: dag, context: { firstButtonKey } }) => {
       dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
     }
   );
-
-  console.log("Debug transformerRegistered", transformerRegistered);
 
   if (transformerRegistered) {
     // the plugin outlet is not updated when the post instance is modified unless we register the new properties as
@@ -100,9 +95,6 @@ function customizeWidgetPostMenu(api) {
 
   const siteSettings = api.container.lookup("service:site-settings");
   api.decorateWidget("post-menu:before", (dec) => {
-
-    console.log("DEBUG dec", dec);
-
 
     if (!dec.state.isTranslated) {
       return;
@@ -172,6 +164,10 @@ function customizeWidgetPostMenu(api) {
   });
 
   api.addPostMenuButton("translate", (attrs, state) => {
+    
+    console.log("debug addPostMenuButton attrs", attrs);
+    console.log("debug addPostMenuButton state", state);
+
     if (!attrs.can_translate) {
       return;
     }
