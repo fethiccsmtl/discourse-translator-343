@@ -95,6 +95,10 @@ function customizeWidgetPostMenu(api) {
 
   const siteSettings = api.container.lookup("service:site-settings");
   api.decorateWidget("post-menu:before", (dec) => {
+
+    console.log("DEBUG dec", dec);
+
+    
     if (!dec.state.isTranslated) {
       return;
     }
