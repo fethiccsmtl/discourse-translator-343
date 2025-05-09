@@ -62,15 +62,8 @@ function customizePostMenu(api, container) {
   const transformerRegistered = api.registerValueTransformer(
     "post-menu-buttons",
     ({ value: dag, context: { firstButtonKey } }) => {
-      // dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
-      dag.add("translate", {
-      setupComponentArgs() {
-          return { title: "Translate button", action: "translate" };
-        },
-        tagName: "button",
-        icon: "globe",
-        classNames: ["btn", "btn-icon"],
-      });
+       dag.add("translate", ToggleTranslationButton, { before: firstButtonKey });
+      
     }
   );
 
