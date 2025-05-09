@@ -164,25 +164,32 @@ function customizeWidgetPostMenu(api) {
   });
 
   api.addPostMenuButton("translate", (attrs, state) => {
-    
-    console.log("debug addPostMenuButton attrs", attrs);
-    console.log("debug addPostMenuButton state", state);
 
-    if (!attrs.can_translate) {
-      return;
-    }
-
-    const [action, title] = !state.isTranslated
-      ? ["translate", "translator.view_translation"]
-      : ["hideTranslation", "translator.hide_translation"];
+    console.log("FORCE attrs", attrs);
 
     return {
-      action,
-      title,
-      icon: "globe",
-      position: "first",
-      className: state.isTranslated ? "translated" : null,
+    action: "translate",
+    title: "translator.view_translation",
+    icon: "globe",
+    position: "first",
     };
+
+    // if (!attrs.can_translate) {
+    //   return;
+    // }
+
+    // const [action, title] = !state.isTranslated
+    //   ? ["translate", "translator.view_translation"]
+    //   : ["hideTranslation", "translator.hide_translation"];
+
+    // return {
+    //   action,
+    //   title,
+    //   icon: "globe",
+    //   position: "first",
+    //   className: state.isTranslated ? "translated" : null,
+    // };
+
   });
 }
 
