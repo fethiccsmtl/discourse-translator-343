@@ -1,0 +1,31 @@
+# WARNING: Never edit this file.
+# It will be overwritten when translations are pulled from Crowdin.
+#
+# To work with us on translations, join this project:
+# https://translate.discourse.org/
+
+el:
+  site_settings:
+    translator_enabled: "Αποδοχή ενσωματωμένης μετάφρασης των αναρτήσεων."
+    translator: "Ο πάροχος της μεταφραστικής υπηρεσίας."
+    translator_azure_subscription_key: "Κλειδί Συνδρομής Azure"
+    translator_azure_region: "Περιοχή Azure"
+    translator_google_api_key: "Κλειδί API Google"
+    translator_yandex_api_key: "Κλειδί API Yandex"
+    max_translations_per_minute: "Το αριθμός των μεταφράσεων κάθε λεπτό που μπορούν να γραφτούν από χρήστες."
+    translator_libretranslate_endpoint: "LibreTranslate API Endpoint"
+    translator_libretranslate_api_key: "Κλειδί API LibreTranslate"
+    translator_aws_region: "Περιοχή AWS"
+    translator_aws_key_id: "ID κλειδιού AWS"
+    translator_aws_secret_access: "Κλειδί μυστικής πρόσβασης AWS"
+    translator_aws_iam_role: "Ρόλος IAM AWS"
+  translator:
+    not_supported: "Αυτή η γλώσσα δεν υποστηρίζεται από τον μεταφραστή."
+    too_long: "Αυτή η ανάρτηση είναι πολύ μεγάλη για να μεταφραστεί από τον μεταφραστή."
+    not_available: "Η υπηρεσία μεταφραστή δεν είναι διαθέσιμη προς το παρόν."
+    microsoft:
+      missing_token: "Ο μεταφραστής δεν μπόρεσε να ανακτήσει ένα έγκυρο token."
+      missing_key: "Δεν δόθηκε Κλειδί Συνδρομής Azure."
+  dashboard:
+    problem:
+      translator_error: "Ο/Η %{provider} ανέφερε σφάλμα μετάφρασης με κωδικό %{code}: %{message}"

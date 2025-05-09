@@ -1,0 +1,16 @@
+# WARNING: Never edit this file.
+# It will be overwritten when translations are pulled from Crowdin.
+#
+# To work with us on translations, join this project:
+# https://translate.discourse.org/
+
+fa_IR:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_translator: "مترجم دیسکورس"
+  js:
+    translator:
+      translated_from: "ترجمه شده از %{language} توسط %{translator}"
+      translating: "در حال ترجمه"

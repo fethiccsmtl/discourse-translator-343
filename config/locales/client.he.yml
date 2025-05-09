@@ -1,0 +1,18 @@
+# WARNING: Never edit this file.
+# It will be overwritten when translations are pulled from Crowdin.
+#
+# To work with us on translations, join this project:
+# https://translate.discourse.org/
+
+he:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_translator: "Discourse מתרגם"
+  js:
+    translator:
+      content_not_translated: "התוכן לא מתורגם. לחיצה תתרגם אותו"
+      content_translated: "התוכן מתורגם. לחיצה תציג את המקור"
+      translated_from: "תורגם מ%{language} ע״י %{translator}"
+      translating: "תרגום"

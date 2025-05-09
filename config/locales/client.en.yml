@@ -1,0 +1,12 @@
+en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_translator: "Discourse Translator"
+  js:
+    translator:
+      content_not_translated: "Content not translated. Click to translate"
+      content_translated: "Content is translated. Click to view original"
+      translated_from: "Translated from %{language} by %{translator}"
+      translating: "Translating"

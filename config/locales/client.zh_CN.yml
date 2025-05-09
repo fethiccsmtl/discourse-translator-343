@@ -1,0 +1,16 @@
+# WARNING: Never edit this file.
+# It will be overwritten when translations are pulled from Crowdin.
+#
+# To work with us on translations, join this project:
+# https://translate.discourse.org/
+
+zh_CN:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_translator: "Discourse Translator"
+  js:
+    translator:
+      translated_from: "由 %{translator} 译自%{language}"
+      translating: "正在翻译"
